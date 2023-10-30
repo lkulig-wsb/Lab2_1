@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9766c23e-f9df-43c7-9518-d251ac556f5d" name="Changes" comment="Zad.2">
+    <list default="true" id="9766c23e-f9df-43c7-9518-d251ac556f5d" name="Changes" comment="Zad.3 - Arrays creation.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
@@ -47,7 +47,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1698670604893</updated>
-      <workItem from="1698670605969" duration="5308000" />
+      <workItem from="1698670605969" duration="6500000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit.">
       <option name="closed" value="true" />
@@ -65,7 +65,23 @@
       <option name="project" value="LOCAL" />
       <updated>1698674772033</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Zad.3 - Arrays creation.">
+      <option name="closed" value="true" />
+      <created>1698676396865</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1698676396865</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Zad.3 - Arrays creation.">
+      <option name="closed" value="true" />
+      <created>1698676441851</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1698676441851</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -74,6 +90,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit." />
     <MESSAGE value="Zad.2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Zad.2" />
+    <MESSAGE value="Zad.3 - Arrays creation." />
+    <option name="LAST_COMMIT_MESSAGE" value="Zad.3 - Arrays creation." />
   </component>
 </project>

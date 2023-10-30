@@ -37,5 +37,13 @@ public class Main {
         System.out.println("--------------------------------------");
         int[]tablicaPierwsza = {0,2,4,6,8,10};
         int[]tablicaDruga = {1,3,5,7,9,11};
+        //Obliczenie sumy wszystkich elementów każdej z tablic (bez użycia pętli).
+        //Arrays.stream tworzy strumień z elem. tablic 'tablicaPierwsza', 'tablicaDruga',
+        //a następnie, przy pomocy operacji .sum(), oblicza sumę wszystki elem. z poszczególnej tablicy.
+        int sumaTablicaPierwsza = Arrays.stream(tablicaPierwsza).sum();
+        int sumaTablicaDruga = Arrays.stream(tablicaDruga).sum();
+        //Wyświetlenie sumy wszystkich elementów dla poszczególnej tablicy za pomocą strumienia wyjścia System.out
+        System.out.println("Suma tablicaPierwsza[]: " + sumaTablicaPierwsza);
+        System.out.println("Suma tablicaDruga[]: " + sumaTablicaDruga);
     }
 }
