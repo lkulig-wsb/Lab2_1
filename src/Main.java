@@ -1,17 +1,36 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        //Zad.2
+        System.out.println("=== LAB2_1 ===");
+        Scanner scanner = new Scanner(System.in);
+        //Deklaracja zmiennych i wprowadzenie ich wartości za pomocą Scanner
+        System.out.println("Zad.2");
+        System.out.println("--------------------------------------");
+        System.out.println("Wprowadź wartość dla zmiennej double: ");
+        double zmiennaDouble = scanner.nextDouble();
+        System.out.println("Wprowadź wartość dla zmiennej int: ");
+        int zmiennaInt = scanner.nextInt();
+        System.out.println("Wprowadź wartość dla zmiennej char: ");
+        char zmiennaChar = scanner.next().charAt(0);
+        System.out.println("Wprowadź wartość dla zmiennej boolean: ");
+        boolean zmiennaBool = scanner.nextBoolean();
+        //Konwersja wartości zmiennych przy pomocy operatorów rzutowania.
+        //Operator rzutowania (int) zmienia typ dla zmiennaDouble, z double na int.
+        //Zmienna konwersjaDoubleInt służy do przechowania liczby po konwersji, a następnie
+        //jest użyta do wyświetlenia konwersji. Podobna zasada dla pozostałych konwersji.
+        int konwersjaDoubleInt = (int)zmiennaDouble;
+        double konwersjaIntDouble = (double) zmiennaInt;
+        int konwersjaCharInt = (int)zmiennaChar;
+        String konwersjaBoolString = String.valueOf(zmiennaBool);
+        //Wyświetlenie konwersji.
+        System.out.println("Konwersja");
+        System.out.println("-----------------------------------");
+        System.out.println("Konwersja double na int: " + konwersjaDoubleInt);
+        System.out.println("Konwersja int na double: " + konwersjaIntDouble);
+        System.out.println("Konwersja char na int: " + konwersjaCharInt);
+        System.out.println("Konwersja bool na String: " + konwersjaBoolString);
+        scanner.close();
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
-
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
     }
 }
