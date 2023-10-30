@@ -45,5 +45,16 @@ public class Main {
         //Wyświetlenie sumy wszystkich elementów dla poszczególnej tablicy za pomocą strumienia wyjścia System.out
         System.out.println("Suma tablicaPierwsza[]: " + sumaTablicaPierwsza);
         System.out.println("Suma tablicaDruga[]: " + sumaTablicaDruga);
+        //Znalezienie maksymalnej i minimalnej wartości dla każdej z tablic.
+        int maxTablicaPierwsza = Arrays.stream(tablicaPierwsza).max().getAsInt();
+        int minTablicaPierwsza = Arrays.stream(tablicaPierwsza).min().getAsInt();
+        int maxTablicaDruga = Arrays.stream(tablicaDruga).max().getAsInt();
+        int minTablicaDruga = Arrays.stream(tablicaDruga).min().getAsInt();
+        //Wypisanie max i min dla każdej z tablic.
+        System.out.println("MAX/MIN");
+        System.out.println("Max tablicaPierwsza: " + maxTablicaPierwsza);
+        System.out.println("Min tablicaPierwsza: " + minTablicaPierwsza);
+        System.out.println("Max tablicaDruga: " + maxTablicaDruga);
+        System.out.println("Min tablicaDruga: " + minTablicaDruga);
     }
 }
