@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
         //Zad.2
@@ -31,6 +32,12 @@ public class Main {
         System.out.println("Konwersja char na int: " + konwersjaCharInt);
         System.out.println("Konwersja bool na String: " + konwersjaBoolString);
         scanner.close();
+        //Zad.3 Utworzenie dwóch tablic wypełnionych liczbami.
+        System.out.println("\nZad.3");
+        System.out.println("--------------------------------------");
+        int[]tablicaPierwsza = {0,2,4,6,8,10};
+        int[]tablicaDruga = {1,3,5,7,9,11};
+
 
     }
 }
