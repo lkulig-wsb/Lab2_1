@@ -37,7 +37,5 @@ public class Main {
         System.out.println("--------------------------------------");
         int[]tablicaPierwsza = {0,2,4,6,8,10};
         int[]tablicaDruga = {1,3,5,7,9,11};
-
-
     }
 }
