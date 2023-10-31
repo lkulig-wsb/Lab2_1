@@ -65,5 +65,17 @@ public class Main {
         //Wypisanie średniej dla każdej z Tablic
         System.out.println("Średnia dla tablicaPierwsza[]: " + sredniaTablicaPierwsza);
         System.out.println("Średnia dla tablicaDruga[]: "+ sredniaTablicaDruga);
+        //Utworzenie kopii istniejących tablic za pomocą metody Arrays.copyOf, i parametru nazwaTablicy.length który
+        //określa że kopia tablicy ma mieć taki sam rozmiar jak oryginalna tablica.
+        int[]kopiaTablicaPierwsza = Arrays.copyOf(tablicaPierwsza,tablicaPierwsza.length);
+        int[]kopiaTablicaDruga = Arrays.copyOf(tablicaDruga, tablicaDruga.length);
+        //Wyświetlenie wszystkich elementów kopi Tablic przy pomocy strumienia (Arrays.stream) i metody forEach
+        System.out.print("kopiaTablicaPierwsza[]: ");
+        Arrays.stream(kopiaTablicaPierwsza).forEach(element -> System.out.print(element + " "));
+        System.out.println();
+        System.out.print("kopiaTablicaDruga[]: ");
+        Arrays.stream(kopiaTablicaDruga).forEach(element -> System.out.print(element + " "));
+
     }
+
 }
