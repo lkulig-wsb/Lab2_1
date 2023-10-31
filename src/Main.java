@@ -75,7 +75,19 @@ public class Main {
         System.out.println();
         System.out.print("kopiaTablicaDruga[]: ");
         Arrays.stream(kopiaTablicaDruga).forEach(element -> System.out.print(element + " "));
-
+        //Filtrowanie tablic. Znalezienie elementów które spełniają określone kryterium, a następnie wpisanie ich do nowej tablicy.
+        //Utworzenie strumienia elem. tablic, a następnie za pomocą operacji filter(element -> element >= wartoscDlaKryterium)
+        //wybieramy te elementy które spełniają wspomniany warunek. toArray() przekształca filtrowany strumień z powrotem na tablicę.
+        int wartoscDlaKryterium = 5;
+        int[]przefiltrowanaTablicaPierwsza = Arrays.stream(tablicaPierwsza).filter(element -> element >= wartoscDlaKryterium).toArray();
+        int[]przefiltrowanaTablicaDruga = Arrays.stream(tablicaDruga).filter(element -> element >= wartoscDlaKryterium).toArray();
+        //Wyświetlenie przefiltrowanych elementów w nowych tablicach.
+        System.out.println();
+        System.out.print("przefiltrowanaTablicaPierwsza[]: ");
+        Arrays.stream(przefiltrowanaTablicaPierwsza).forEach(element -> System.out.print(element + " "));
+        System.out.println();
+        System.out.print("przefiltrowanaTablicaDruga[]: ");
+        Arrays.stream(przefiltrowanaTablicaDruga).forEach(element -> System.out.print(element + " "));
     }
 
 }
