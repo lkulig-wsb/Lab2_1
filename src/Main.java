@@ -56,5 +56,14 @@ public class Main {
         System.out.println("Min tablicaPierwsza: " + minTablicaPierwsza);
         System.out.println("Max tablicaDruga: " + maxTablicaDruga);
         System.out.println("Min tablicaDruga: " + minTablicaDruga);
+        //Obliczenie średniej wartości dla każdej z tablic
+        //Za pomocą polecenia Arrays.stream(nazwaTablicy) tworzymy strumień elementów tablicy, który umożliwia nam
+        //wykonywanie różnych operacji, takich jak average(), czyli obliczenie średniej elementów tablicy.
+        //getASDouble() - zwraca średnią jako double
+        double sredniaTablicaPierwsza = Arrays.stream(tablicaPierwsza).average().getAsDouble();
+        double sredniaTablicaDruga = Arrays.stream(tablicaDruga).average().getAsDouble();
+        //Wypisanie średniej dla każdej z Tablic
+        System.out.println("Średnia dla tablicaPierwsza[]: " + sredniaTablicaPierwsza);
+        System.out.println("Średnia dla tablicaDruga[]: "+ sredniaTablicaDruga);
     }
 }
