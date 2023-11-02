@@ -35,7 +35,7 @@ public class Main {
         System.out.println("\nZad.3");
         System.out.println("--------------------------------------");
         int[]tablicaPierwsza = {0,2,4,6,8,10};
-        int[]tablicaDruga = {1,3,5,7,9,11};
+        int[]tablicaDruga = {1,3,5,7,9,11,7,7};
         //3.1 Obliczenie sumy wszystkich elementów każdej z tablic (bez użycia pętli).
         //Arrays.stream tworzy strumień z elem. tablic 'tablicaPierwsza', 'tablicaDruga',
         //a następnie, przy pomocy operacji .sum(), oblicza sumę wszystki elem. z poszczególnej tablicy.
@@ -141,9 +141,19 @@ public class Main {
         //Wyświetlnie tablicy połączonej po sortowaniu.
         System.out.print("\nPosortowana tablicaPolaczona[]: ");
         Arrays.stream(tablicaPolaczona).forEach(element -> System.out.print(element + " "));
-
-
-
+        //3.8 Znalezienie liczby wystąpień określonej wartości w tablicy
+        System.out.println("\n--3.8--");
+        //Wyświetlenie elementów dla tablicaDruga.
+        System.out.print("tablicaDruga[]: ");
+        Arrays.stream(tablicaDruga).forEach(element -> System.out.print(element + " "));
+        System.out.println();
+        //Użytkownik jest proszony o podanie elementu dla którego chcemy wyszukać ilość wystąpień.
+        System.out.println("Podaj element tablicy dla którego chcesz sprawdzić ilość wystąpień: ");
+        int wartoscDlaWystapien = scanner.nextInt();
+        //Do wyszukania ilości wystąpień danego elementu w tablicy, wykorzystujemy po raz kolejny metodę .filter +
+        //metodę .count(), która zliczy ilość wystąpień.
+        long liczbaWystapien = Arrays.stream(tablicaDruga).filter(element -> element == wartoscDlaWystapien).count();
+        System.out.println("Liczba wystąpień wartości " + wartoscDlaWystapien + " w tablicaDruga[] to:  " + liczbaWystapien);
         scanner.close();
 
     }
