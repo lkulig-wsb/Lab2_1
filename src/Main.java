@@ -36,60 +36,64 @@ public class Main {
         System.out.println("--------------------------------------");
         int[]tablicaPierwsza = {0,2,4,6,8,10};
         int[]tablicaDruga = {1,3,5,7,9,11};
-        //Obliczenie sumy wszystkich elementów każdej z tablic (bez użycia pętli).
+        //3.1 Obliczenie sumy wszystkich elementów każdej z tablic (bez użycia pętli).
         //Arrays.stream tworzy strumień z elem. tablic 'tablicaPierwsza', 'tablicaDruga',
         //a następnie, przy pomocy operacji .sum(), oblicza sumę wszystki elem. z poszczególnej tablicy.
         int sumaTablicaPierwsza = Arrays.stream(tablicaPierwsza).sum();
         int sumaTablicaDruga = Arrays.stream(tablicaDruga).sum();
         //Wyświetlenie sumy wszystkich elementów dla poszczególnej tablicy za pomocą strumienia wyjścia System.out
+        System.out.println("--3.1--");
         System.out.println("Suma tablicaPierwsza[]: " + sumaTablicaPierwsza);
         System.out.println("Suma tablicaDruga[]: " + sumaTablicaDruga);
-        //Znalezienie maksymalnej i minimalnej wartości dla każdej z tablic.
+        //3.2 Znalezienie maksymalnej i minimalnej wartości dla każdej z tablic.
         int maxTablicaPierwsza = Arrays.stream(tablicaPierwsza).max().getAsInt();
         int minTablicaPierwsza = Arrays.stream(tablicaPierwsza).min().getAsInt();
         int maxTablicaDruga = Arrays.stream(tablicaDruga).max().getAsInt();
         int minTablicaDruga = Arrays.stream(tablicaDruga).min().getAsInt();
         //Wypisanie max i min dla każdej z tablic.
-        System.out.println("MAX/MIN");
+        System.out.println("--3.2--");
         System.out.println("Max tablicaPierwsza: " + maxTablicaPierwsza);
         System.out.println("Min tablicaPierwsza: " + minTablicaPierwsza);
         System.out.println("Max tablicaDruga: " + maxTablicaDruga);
         System.out.println("Min tablicaDruga: " + minTablicaDruga);
-        //Obliczenie średniej wartości dla każdej z tablic
+        //3.3 Obliczenie średniej wartości dla każdej z tablic
         //Za pomocą polecenia Arrays.stream(nazwaTablicy) tworzymy strumień elementów tablicy, który umożliwia nam
         //wykonywanie różnych operacji, takich jak average(), czyli obliczenie średniej elementów tablicy.
         //getASDouble() - zwraca średnią jako double
         double sredniaTablicaPierwsza = Arrays.stream(tablicaPierwsza).average().getAsDouble();
         double sredniaTablicaDruga = Arrays.stream(tablicaDruga).average().getAsDouble();
         //Wypisanie średniej dla każdej z Tablic
+        System.out.println("--3.3--");
         System.out.println("Średnia dla tablicaPierwsza[]: " + sredniaTablicaPierwsza);
         System.out.println("Średnia dla tablicaDruga[]: "+ sredniaTablicaDruga);
-        //Utworzenie kopii istniejących tablic za pomocą metody Arrays.copyOf, i parametru nazwaTablicy.length który
+        //3.4 Utworzenie kopii istniejących tablic za pomocą metody Arrays.copyOf, i parametru nazwaTablicy.length który
         //określa że kopia tablicy ma mieć taki sam rozmiar jak oryginalna tablica.
         int[]kopiaTablicaPierwsza = Arrays.copyOf(tablicaPierwsza,tablicaPierwsza.length);
         int[]kopiaTablicaDruga = Arrays.copyOf(tablicaDruga, tablicaDruga.length);
         //Wyświetlenie wszystkich elementów kopi Tablic przy pomocy strumienia (Arrays.stream) i metody forEach.
+        System.out.println("--3.4--");
         System.out.print("kopiaTablicaPierwsza[]: ");
         Arrays.stream(kopiaTablicaPierwsza).forEach(element -> System.out.print(element + " "));
         System.out.println();
         System.out.print("kopiaTablicaDruga[]: ");
         Arrays.stream(kopiaTablicaDruga).forEach(element -> System.out.print(element + " "));
-        //Filtrowanie tablic. Znalezienie elementów które spełniają określone kryterium, a następnie wpisanie ich do nowej tablicy.
+        //3.5 Filtrowanie tablic. Znalezienie elementów które spełniają określone kryterium, a następnie wpisanie ich do nowej tablicy.
         //Utworzenie strumienia elem. tablic, a następnie za pomocą operacji filter(element -> element >= wartoscDlaKryterium)
         //wybieramy te elementy które spełniają wspomniany warunek. toArray() przekształca filtrowany strumień z powrotem na tablicę.
         int wartoscDlaKryterium = 5;
         int[]przefiltrowanaTablicaPierwsza = Arrays.stream(tablicaPierwsza).filter(element -> element >= wartoscDlaKryterium).toArray();
         int[]przefiltrowanaTablicaDruga = Arrays.stream(tablicaDruga).filter(element -> element >= wartoscDlaKryterium).toArray();
         //Wyświetlenie przefiltrowanych elementów w nowych tablicach.
-        System.out.println();
+        System.out.println("\n--3.5--");
         System.out.print("przefiltrowanaTablicaPierwsza[]: ");
         Arrays.stream(przefiltrowanaTablicaPierwsza).forEach(element -> System.out.print(element + " "));
         System.out.println();
         System.out.print("przefiltrowanaTablicaDruga[]: ");
         Arrays.stream(przefiltrowanaTablicaDruga).forEach(element -> System.out.print(element + " "));
-        //Usunięcie określonego elementu z tablicy i utworzenie nowej tablicy bez tego elementu.
+        //3.6 Usunięcie określonego elementu z tablicy i utworzenie nowej tablicy bez tego elementu.
         System.out.println();
         //Wyświetlane są elementy tablicy tablicaPierwsza.
+        System.out.println("--3.6--");
         System.out.print("tablicaPierwsza[]: ");
         Arrays.stream(tablicaPierwsza).forEach(element -> System.out.print(element + " "));
         //Użytkownik proszony jest o wprowadzenie elementu, który ma zostać usunięty z tablicy przy pomocy metody wprowadzania
@@ -110,6 +114,33 @@ public class Main {
         int[] nowaTablicaDruga = Arrays.stream(tablicaDruga).filter(element -> element != elementDoUsuniecia2).toArray();
         System.out.print("nowaTablicaDruga[]: ");
         Arrays.stream(nowaTablicaDruga).forEach(element -> System.out.print(element + " "));
+        System.out.println();
+        //3.7 Połaczenie dwóch tablic.
+        // Wyświetlenie elementów poszczególnej tablicy
+        System.out.println("--3.7--");
+        System.out.print("tablicaPierwsza[]: ");
+        Arrays.stream(tablicaPierwsza).forEach(element -> System.out.print(element + " "));
+        System.out.println();
+        System.out.print("tablicaDruga[]: ");
+        Arrays.stream(tablicaDruga).forEach(element -> System.out.print(element + " "));
+        // Tworzona jest nowa tablica o nazwie 'tablicaPolaczona' która ma rozmiar sumy rozmiarów tablic
+        //'tablicaPierwsza' oraz 'tablicaDruga'.
+        int[]tablicaPolaczona = new int[tablicaPierwsza.length + tablicaDruga.length];
+        //Łączymy tablice za pomocą metody System.arraycopy. Jako argumenty podajemy kolejno nazwę pierwszej tablicy z
+        //której będziemy kopiować elementy do nowej tablicy, numer pozycji pierwszego elementu z tej tablicy,
+        //nazwę tablicy do której będziemy kopiować, numer początkowej pozycji w tablicy docelowej do której wklejamy elementy.
+        //tablicaPierwsza.length określa ilość elementów do skopiowania.
+        System.arraycopy(tablicaPierwsza,0,tablicaPolaczona,0,tablicaPierwsza.length);
+        //W przypadku połączenia dwóch tablic, wykorzystujemy metodę System.arraycopy dwukrotnie.
+        System.arraycopy(tablicaDruga,0,tablicaPolaczona,tablicaPierwsza.length,tablicaDruga.length);
+        //Wyświetlenie elementów tablicy tablicaPolaczona
+        System.out.print("\ntablicaPolaczona[]: ");
+        Arrays.stream(tablicaPolaczona).forEach(element -> System.out.print(element + " "));
+        //Posortowanie elementów tablicy połączonej za pomocą metody Arrays.sort();
+        Arrays.sort(tablicaPolaczona);
+        //Wyświetlnie tablicy połączonej po sortowaniu.
+        System.out.print("\nPosortowana tablicaPolaczona[]: ");
+        Arrays.stream(tablicaPolaczona).forEach(element -> System.out.print(element + " "));
 
 
 
