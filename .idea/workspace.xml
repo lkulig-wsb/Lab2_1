@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9766c23e-f9df-43c7-9518-d251ac556f5d" name="Changes" comment="Zad.3 - Arrays' Copy.">
+    <list default="true" id="9766c23e-f9df-43c7-9518-d251ac556f5d" name="Changes" comment="Zad.3 - Arrays' Filter.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
@@ -48,7 +48,8 @@
       <option name="presentableId" value="Default" />
       <updated>1698670604893</updated>
       <workItem from="1698670605969" duration="7853000" />
-      <workItem from="1698737652480" duration="10271000" />
+      <workItem from="1698737652480" duration="13358000" />
+      <workItem from="1698901897250" duration="1299000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit.">
       <option name="closed" value="true" />
@@ -122,7 +123,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698747128523</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Zad.3 - Arrays' Filter.">
+      <option name="closed" value="true" />
+      <created>1698752452438</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1698752452438</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,6 +145,7 @@
     <MESSAGE value="Zad.3 - Arrays' Max&amp;Min." />
     <MESSAGE value="Zad.3 - Arrays' Average." />
     <MESSAGE value="Zad.3 - Arrays' Copy." />
-    <option name="LAST_COMMIT_MESSAGE" value="Zad.3 - Arrays' Copy." />
+    <MESSAGE value="Zad.3 - Arrays' Filter." />
+    <option name="LAST_COMMIT_MESSAGE" value="Zad.3 - Arrays' Filter." />
   </component>
 </project>

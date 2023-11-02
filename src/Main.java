@@ -31,7 +31,6 @@ public class Main {
         System.out.println("Konwersja int na double: " + konwersjaIntDouble);
         System.out.println("Konwersja char na int: " + konwersjaCharInt);
         System.out.println("Konwersja bool na String: " + konwersjaBoolString);
-        scanner.close();
         //Zad.3 Utworzenie dwóch tablic wypełnionych liczbami.
         System.out.println("\nZad.3");
         System.out.println("--------------------------------------");
@@ -88,6 +87,34 @@ public class Main {
         System.out.println();
         System.out.print("przefiltrowanaTablicaDruga[]: ");
         Arrays.stream(przefiltrowanaTablicaDruga).forEach(element -> System.out.print(element + " "));
+        //Usunięcie określonego elementu z tablicy i utworzenie nowej tablicy bez tego elementu.
+        System.out.println();
+        //Wyświetlane są elementy tablicy tablicaPierwsza.
+        System.out.print("tablicaPierwsza[]: ");
+        Arrays.stream(tablicaPierwsza).forEach(element -> System.out.print(element + " "));
+        //Użytkownik proszony jest o wprowadzenie elementu, który ma zostać usunięty z tablicy przy pomocy metody wprowadzania
+        //liczb całkowitych scanner.nextInt()
+        System.out.print("\nKtóry elemnt usunąć z tablicaPierwsza[]: ");
+        int elementDoUsuniecia = scanner.nextInt();
+        //Utworzenie nowej tablicy która zawiera elementy z tablicaPierwsza ale bez elementu który jest równy 'elementDoUsuniecia'
+        //Operacja .filter sprawdza każdy element strumienia i zwraca tylko te elementy które nie są równe 'elementDoUsuniecia'.
+        //W przypadku równości element będzie odrzucany.
+        int[] nowaTablicaPierwsza = Arrays.stream(tablicaPierwsza).filter(element -> element != elementDoUsuniecia).toArray();
+        System.out.print("nowaTablicaPierwsza[]: ");
+        Arrays.stream(nowaTablicaPierwsza).forEach(element -> System.out.print(element + " "));
+        System.out.println();
+        System.out.print("tablicaDruga[]: ");
+        Arrays.stream(tablicaDruga).forEach(element -> System.out.print(element + " "));
+        System.out.print("\nKtóry elemnt usunąć z tablicaDruga[]: ");
+        int elementDoUsuniecia2 = scanner.nextInt();
+        int[] nowaTablicaDruga = Arrays.stream(tablicaDruga).filter(element -> element != elementDoUsuniecia2).toArray();
+        System.out.print("nowaTablicaDruga[]: ");
+        Arrays.stream(nowaTablicaDruga).forEach(element -> System.out.print(element + " "));
+
+
+
+        scanner.close();
+
     }
 
 }
